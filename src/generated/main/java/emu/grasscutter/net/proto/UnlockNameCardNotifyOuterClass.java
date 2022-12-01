@@ -19,17 +19,16 @@ public final class UnlockNameCardNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 name_card_id = 8;</code>
+     * <code>uint32 name_card_id = 6;</code>
      * @return The nameCardId.
      */
     int getNameCardId();
   }
   /**
    * <pre>
-   * CmdId: 4006
+   * CmdId: 4080
    * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * EnetIsReliable: true
    * </pre>
    *
    * Protobuf type {@code UnlockNameCardNotify}
@@ -76,7 +75,7 @@ public final class UnlockNameCardNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 48: {
 
               nameCardId_ = input.readUInt32();
               break;
@@ -113,10 +112,10 @@ public final class UnlockNameCardNotifyOuterClass {
               emu.grasscutter.net.proto.UnlockNameCardNotifyOuterClass.UnlockNameCardNotify.class, emu.grasscutter.net.proto.UnlockNameCardNotifyOuterClass.UnlockNameCardNotify.Builder.class);
     }
 
-    public static final int NAME_CARD_ID_FIELD_NUMBER = 8;
+    public static final int NAME_CARD_ID_FIELD_NUMBER = 6;
     private int nameCardId_;
     /**
-     * <code>uint32 name_card_id = 8;</code>
+     * <code>uint32 name_card_id = 6;</code>
      * @return The nameCardId.
      */
     @java.lang.Override
@@ -139,7 +138,7 @@ public final class UnlockNameCardNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (nameCardId_ != 0) {
-        output.writeUInt32(8, nameCardId_);
+        output.writeUInt32(6, nameCardId_);
       }
       unknownFields.writeTo(output);
     }
@@ -152,7 +151,7 @@ public final class UnlockNameCardNotifyOuterClass {
       size = 0;
       if (nameCardId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, nameCardId_);
+          .computeUInt32Size(6, nameCardId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -281,10 +280,9 @@ public final class UnlockNameCardNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4006
+     * CmdId: 4080
      * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * EnetIsReliable: true
      * </pre>
      *
      * Protobuf type {@code UnlockNameCardNotify}
@@ -435,7 +433,7 @@ public final class UnlockNameCardNotifyOuterClass {
 
       private int nameCardId_ ;
       /**
-       * <code>uint32 name_card_id = 8;</code>
+       * <code>uint32 name_card_id = 6;</code>
        * @return The nameCardId.
        */
       @java.lang.Override
@@ -443,7 +441,7 @@ public final class UnlockNameCardNotifyOuterClass {
         return nameCardId_;
       }
       /**
-       * <code>uint32 name_card_id = 8;</code>
+       * <code>uint32 name_card_id = 6;</code>
        * @param value The nameCardId to set.
        * @return This builder for chaining.
        */
@@ -454,7 +452,7 @@ public final class UnlockNameCardNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 name_card_id = 8;</code>
+       * <code>uint32 name_card_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearNameCardId() {
@@ -531,7 +529,7 @@ public final class UnlockNameCardNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032UnlockNameCardNotify.proto\",\n\024UnlockNa" +
-      "meCardNotify\022\024\n\014name_card_id\030\010 \001(\rB\033\n\031em" +
+      "meCardNotify\022\024\n\014name_card_id\030\006 \001(\rB\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

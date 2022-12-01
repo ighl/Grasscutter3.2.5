@@ -19,7 +19,7 @@ public final class QueryFilterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 type_id = 9;</code>
+     * <code>int32 type_id = 2;</code>
      * @return The typeId.
      */
     int getTypeId();
@@ -75,7 +75,7 @@ public final class QueryFilterOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 16: {
 
               typeId_ = input.readInt32();
               break;
@@ -117,10 +117,10 @@ public final class QueryFilterOuterClass {
               emu.grasscutter.net.proto.QueryFilterOuterClass.QueryFilter.class, emu.grasscutter.net.proto.QueryFilterOuterClass.QueryFilter.Builder.class);
     }
 
-    public static final int TYPE_ID_FIELD_NUMBER = 9;
+    public static final int TYPE_ID_FIELD_NUMBER = 2;
     private int typeId_;
     /**
-     * <code>int32 type_id = 9;</code>
+     * <code>int32 type_id = 2;</code>
      * @return The typeId.
      */
     @java.lang.Override
@@ -154,7 +154,7 @@ public final class QueryFilterOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (typeId_ != 0) {
-        output.writeInt32(9, typeId_);
+        output.writeInt32(2, typeId_);
       }
       if (areaMask_ != 0) {
         output.writeInt32(13, areaMask_);
@@ -170,7 +170,7 @@ public final class QueryFilterOuterClass {
       size = 0;
       if (typeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, typeId_);
+          .computeInt32Size(2, typeId_);
       }
       if (areaMask_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -460,7 +460,7 @@ public final class QueryFilterOuterClass {
 
       private int typeId_ ;
       /**
-       * <code>int32 type_id = 9;</code>
+       * <code>int32 type_id = 2;</code>
        * @return The typeId.
        */
       @java.lang.Override
@@ -468,7 +468,7 @@ public final class QueryFilterOuterClass {
         return typeId_;
       }
       /**
-       * <code>int32 type_id = 9;</code>
+       * <code>int32 type_id = 2;</code>
        * @param value The typeId to set.
        * @return This builder for chaining.
        */
@@ -479,7 +479,7 @@ public final class QueryFilterOuterClass {
         return this;
       }
       /**
-       * <code>int32 type_id = 9;</code>
+       * <code>int32 type_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTypeId() {
@@ -587,7 +587,7 @@ public final class QueryFilterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\021QueryFilter.proto\"1\n\013QueryFilter\022\017\n\007ty" +
-      "pe_id\030\t \001(\005\022\021\n\tarea_mask\030\r \001(\005B\033\n\031emu.gr" +
+      "pe_id\030\002 \001(\005\022\021\n\tarea_mask\030\r \001(\005B\033\n\031emu.gr" +
       "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

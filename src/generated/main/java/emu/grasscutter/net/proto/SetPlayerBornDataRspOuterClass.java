@@ -26,10 +26,9 @@ public final class SetPlayerBornDataRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 182
+   * CmdId: 109
    * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * EnetIsReliable: true
    * </pre>
    *
    * Protobuf type {@code SetPlayerBornDataRsp}
@@ -281,10 +280,9 @@ public final class SetPlayerBornDataRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 182
+     * CmdId: 109
      * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * EnetIsReliable: true
      * </pre>
      *
      * Protobuf type {@code SetPlayerBornDataRsp}

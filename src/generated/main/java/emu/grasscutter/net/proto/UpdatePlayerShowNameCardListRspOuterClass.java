@@ -19,31 +19,31 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 13;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>repeated uint32 show_name_card_id_list = 12;</code>
+     * <code>repeated uint32 show_name_card_id_list = 3;</code>
      * @return A list containing the showNameCardIdList.
      */
     java.util.List<java.lang.Integer> getShowNameCardIdListList();
     /**
-     * <code>repeated uint32 show_name_card_id_list = 12;</code>
+     * <code>repeated uint32 show_name_card_id_list = 3;</code>
      * @return The count of showNameCardIdList.
      */
     int getShowNameCardIdListCount();
     /**
-     * <code>repeated uint32 show_name_card_id_list = 12;</code>
+     * <code>repeated uint32 show_name_card_id_list = 3;</code>
      * @param index The index of the element to return.
      * @return The showNameCardIdList at the given index.
      */
     int getShowNameCardIdList(int index);
+
+    /**
+     * <code>int32 retcode = 12;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 4019
+   * CmdId: 4052
    * EnetChannelId: 0
    * EnetIsReliable: true
    * </pre>
@@ -94,7 +94,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 24: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 showNameCardIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -102,7 +102,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
               showNameCardIdList_.addInt(input.readUInt32());
               break;
             }
-            case 98: {
+            case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -115,7 +115,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 104: {
+            case 96: {
 
               retcode_ = input.readInt32();
               break;
@@ -155,21 +155,10 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
               emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp.class, emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 13;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER = 12;
+    public static final int SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList showNameCardIdList_;
     /**
-     * <code>repeated uint32 show_name_card_id_list = 12;</code>
+     * <code>repeated uint32 show_name_card_id_list = 3;</code>
      * @return A list containing the showNameCardIdList.
      */
     @java.lang.Override
@@ -178,14 +167,14 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       return showNameCardIdList_;
     }
     /**
-     * <code>repeated uint32 show_name_card_id_list = 12;</code>
+     * <code>repeated uint32 show_name_card_id_list = 3;</code>
      * @return The count of showNameCardIdList.
      */
     public int getShowNameCardIdListCount() {
       return showNameCardIdList_.size();
     }
     /**
-     * <code>repeated uint32 show_name_card_id_list = 12;</code>
+     * <code>repeated uint32 show_name_card_id_list = 3;</code>
      * @param index The index of the element to return.
      * @return The showNameCardIdList at the given index.
      */
@@ -193,6 +182,17 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       return showNameCardIdList_.getInt(index);
     }
     private int showNameCardIdListMemoizedSerializedSize = -1;
+
+    public static final int RETCODE_FIELD_NUMBER = 12;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 12;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -210,14 +210,14 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getShowNameCardIdListList().size() > 0) {
-        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(showNameCardIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < showNameCardIdList_.size(); i++) {
         output.writeUInt32NoTag(showNameCardIdList_.getInt(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(12, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -244,7 +244,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(12, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -261,10 +261,10 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       }
       emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp other = (emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (!getShowNameCardIdListList()
           .equals(other.getShowNameCardIdListList())) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -276,12 +276,12 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       if (getShowNameCardIdListCount() > 0) {
         hash = (37 * hash) + SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getShowNameCardIdListList().hashCode();
       }
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -379,7 +379,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4019
+     * CmdId: 4052
      * EnetChannelId: 0
      * EnetIsReliable: true
      * </pre>
@@ -421,10 +421,10 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         showNameCardIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        retcode_ = 0;
+
         return this;
       }
 
@@ -452,12 +452,12 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       public emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp buildPartial() {
         emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp result = new emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp(this);
         int from_bitField0_ = bitField0_;
-        result.retcode_ = retcode_;
         if (((bitField0_ & 0x00000001) != 0)) {
           showNameCardIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.showNameCardIdList_ = showNameCardIdList_;
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -506,9 +506,6 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp other) {
         if (other == emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (!other.showNameCardIdList_.isEmpty()) {
           if (showNameCardIdList_.isEmpty()) {
             showNameCardIdList_ = other.showNameCardIdList_;
@@ -518,6 +515,9 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
             showNameCardIdList_.addAll(other.showNameCardIdList_);
           }
           onChanged();
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -549,37 +549,6 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
       }
       private int bitField0_;
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 13;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 13;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.Internal.IntList showNameCardIdList_ = emptyIntList();
       private void ensureShowNameCardIdListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
@@ -588,7 +557,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @return A list containing the showNameCardIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -597,14 +566,14 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
                  java.util.Collections.unmodifiableList(showNameCardIdList_) : showNameCardIdList_;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @return The count of showNameCardIdList.
        */
       public int getShowNameCardIdListCount() {
         return showNameCardIdList_.size();
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @param index The index of the element to return.
        * @return The showNameCardIdList at the given index.
        */
@@ -612,7 +581,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
         return showNameCardIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @param index The index to set the value at.
        * @param value The showNameCardIdList to set.
        * @return This builder for chaining.
@@ -625,7 +594,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @param value The showNameCardIdList to add.
        * @return This builder for chaining.
        */
@@ -636,7 +605,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @param values The showNameCardIdList to add.
        * @return This builder for chaining.
        */
@@ -649,12 +618,43 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 12;</code>
+       * <code>repeated uint32 show_name_card_id_list = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearShowNameCardIdList() {
         showNameCardIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 12;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 12;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -726,9 +726,9 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n%UpdatePlayerShowNameCardListRsp.proto\"" +
-      "R\n\037UpdatePlayerShowNameCardListRsp\022\017\n\007re" +
-      "tcode\030\r \001(\005\022\036\n\026show_name_card_id_list\030\014 " +
-      "\003(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "R\n\037UpdatePlayerShowNameCardListRsp\022\036\n\026sh" +
+      "ow_name_card_id_list\030\003 \003(\r\022\017\n\007retcode\030\014 " +
+      "\001(\005B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -739,7 +739,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
     internal_static_UpdatePlayerShowNameCardListRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_UpdatePlayerShowNameCardListRsp_descriptor,
-        new java.lang.String[] { "Retcode", "ShowNameCardIdList", });
+        new java.lang.String[] { "ShowNameCardIdList", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,25 +19,25 @@ public final class EvtHittingOtherInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.AttackResult attack_result = 2;</code>
+     * <code>.AttackResult attack_result = 14;</code>
      * @return Whether the attackResult field is set.
      */
     boolean hasAttackResult();
     /**
-     * <code>.AttackResult attack_result = 2;</code>
+     * <code>.AttackResult attack_result = 14;</code>
      * @return The attackResult.
      */
     emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult getAttackResult();
     /**
-     * <code>.AttackResult attack_result = 2;</code>
+     * <code>.AttackResult attack_result = 14;</code>
      */
     emu.grasscutter.net.proto.AttackResultOuterClass.AttackResultOrBuilder getAttackResultOrBuilder();
 
     /**
-     * <code>uint32 peer_id = 8;</code>
-     * @return The peerId.
+     * <code>uint32 uid = 11;</code>
+     * @return The uid.
      */
-    int getPeerId();
+    int getUid();
   }
   /**
    * Protobuf type {@code EvtHittingOtherInfo}
@@ -84,7 +84,12 @@ public final class EvtHittingOtherInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 88: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 114: {
               emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.Builder subBuilder = null;
               if (attackResult_ != null) {
                 subBuilder = attackResult_.toBuilder();
@@ -95,11 +100,6 @@ public final class EvtHittingOtherInfoOuterClass {
                 attackResult_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 64: {
-
-              peerId_ = input.readUInt32();
               break;
             }
             default: {
@@ -134,10 +134,10 @@ public final class EvtHittingOtherInfoOuterClass {
               emu.grasscutter.net.proto.EvtHittingOtherInfoOuterClass.EvtHittingOtherInfo.class, emu.grasscutter.net.proto.EvtHittingOtherInfoOuterClass.EvtHittingOtherInfo.Builder.class);
     }
 
-    public static final int ATTACK_RESULT_FIELD_NUMBER = 2;
+    public static final int ATTACK_RESULT_FIELD_NUMBER = 14;
     private emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult attackResult_;
     /**
-     * <code>.AttackResult attack_result = 2;</code>
+     * <code>.AttackResult attack_result = 14;</code>
      * @return Whether the attackResult field is set.
      */
     @java.lang.Override
@@ -145,7 +145,7 @@ public final class EvtHittingOtherInfoOuterClass {
       return attackResult_ != null;
     }
     /**
-     * <code>.AttackResult attack_result = 2;</code>
+     * <code>.AttackResult attack_result = 14;</code>
      * @return The attackResult.
      */
     @java.lang.Override
@@ -153,22 +153,22 @@ public final class EvtHittingOtherInfoOuterClass {
       return attackResult_ == null ? emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.getDefaultInstance() : attackResult_;
     }
     /**
-     * <code>.AttackResult attack_result = 2;</code>
+     * <code>.AttackResult attack_result = 14;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AttackResultOuterClass.AttackResultOrBuilder getAttackResultOrBuilder() {
       return getAttackResult();
     }
 
-    public static final int PEER_ID_FIELD_NUMBER = 8;
-    private int peerId_;
+    public static final int UID_FIELD_NUMBER = 11;
+    private int uid_;
     /**
-     * <code>uint32 peer_id = 8;</code>
-     * @return The peerId.
+     * <code>uint32 uid = 11;</code>
+     * @return The uid.
      */
     @java.lang.Override
-    public int getPeerId() {
-      return peerId_;
+    public int getUid() {
+      return uid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -185,11 +185,11 @@ public final class EvtHittingOtherInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (attackResult_ != null) {
-        output.writeMessage(2, getAttackResult());
+      if (uid_ != 0) {
+        output.writeUInt32(11, uid_);
       }
-      if (peerId_ != 0) {
-        output.writeUInt32(8, peerId_);
+      if (attackResult_ != null) {
+        output.writeMessage(14, getAttackResult());
       }
       unknownFields.writeTo(output);
     }
@@ -200,13 +200,13 @@ public final class EvtHittingOtherInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (uid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, uid_);
+      }
       if (attackResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getAttackResult());
-      }
-      if (peerId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, peerId_);
+          .computeMessageSize(14, getAttackResult());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -228,8 +228,8 @@ public final class EvtHittingOtherInfoOuterClass {
         if (!getAttackResult()
             .equals(other.getAttackResult())) return false;
       }
-      if (getPeerId()
-          != other.getPeerId()) return false;
+      if (getUid()
+          != other.getUid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -245,8 +245,8 @@ public final class EvtHittingOtherInfoOuterClass {
         hash = (37 * hash) + ATTACK_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getAttackResult().hashCode();
       }
-      hash = (37 * hash) + PEER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPeerId();
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -386,7 +386,7 @@ public final class EvtHittingOtherInfoOuterClass {
           attackResult_ = null;
           attackResultBuilder_ = null;
         }
-        peerId_ = 0;
+        uid_ = 0;
 
         return this;
       }
@@ -419,7 +419,7 @@ public final class EvtHittingOtherInfoOuterClass {
         } else {
           result.attackResult_ = attackResultBuilder_.build();
         }
-        result.peerId_ = peerId_;
+        result.uid_ = uid_;
         onBuilt();
         return result;
       }
@@ -471,8 +471,8 @@ public final class EvtHittingOtherInfoOuterClass {
         if (other.hasAttackResult()) {
           mergeAttackResult(other.getAttackResult());
         }
-        if (other.getPeerId() != 0) {
-          setPeerId(other.getPeerId());
+        if (other.getUid() != 0) {
+          setUid(other.getUid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -507,14 +507,14 @@ public final class EvtHittingOtherInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult, emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.Builder, emu.grasscutter.net.proto.AttackResultOuterClass.AttackResultOrBuilder> attackResultBuilder_;
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        * @return Whether the attackResult field is set.
        */
       public boolean hasAttackResult() {
         return attackResultBuilder_ != null || attackResult_ != null;
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        * @return The attackResult.
        */
       public emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult getAttackResult() {
@@ -525,7 +525,7 @@ public final class EvtHittingOtherInfoOuterClass {
         }
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       public Builder setAttackResult(emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult value) {
         if (attackResultBuilder_ == null) {
@@ -541,7 +541,7 @@ public final class EvtHittingOtherInfoOuterClass {
         return this;
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       public Builder setAttackResult(
           emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.Builder builderForValue) {
@@ -555,7 +555,7 @@ public final class EvtHittingOtherInfoOuterClass {
         return this;
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       public Builder mergeAttackResult(emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult value) {
         if (attackResultBuilder_ == null) {
@@ -573,7 +573,7 @@ public final class EvtHittingOtherInfoOuterClass {
         return this;
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       public Builder clearAttackResult() {
         if (attackResultBuilder_ == null) {
@@ -587,7 +587,7 @@ public final class EvtHittingOtherInfoOuterClass {
         return this;
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       public emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.Builder getAttackResultBuilder() {
         
@@ -595,7 +595,7 @@ public final class EvtHittingOtherInfoOuterClass {
         return getAttackResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       public emu.grasscutter.net.proto.AttackResultOuterClass.AttackResultOrBuilder getAttackResultOrBuilder() {
         if (attackResultBuilder_ != null) {
@@ -606,7 +606,7 @@ public final class EvtHittingOtherInfoOuterClass {
         }
       }
       /**
-       * <code>.AttackResult attack_result = 2;</code>
+       * <code>.AttackResult attack_result = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult, emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.Builder, emu.grasscutter.net.proto.AttackResultOuterClass.AttackResultOrBuilder> 
@@ -622,33 +622,33 @@ public final class EvtHittingOtherInfoOuterClass {
         return attackResultBuilder_;
       }
 
-      private int peerId_ ;
+      private int uid_ ;
       /**
-       * <code>uint32 peer_id = 8;</code>
-       * @return The peerId.
+       * <code>uint32 uid = 11;</code>
+       * @return The uid.
        */
       @java.lang.Override
-      public int getPeerId() {
-        return peerId_;
+      public int getUid() {
+        return uid_;
       }
       /**
-       * <code>uint32 peer_id = 8;</code>
-       * @param value The peerId to set.
+       * <code>uint32 uid = 11;</code>
+       * @param value The uid to set.
        * @return This builder for chaining.
        */
-      public Builder setPeerId(int value) {
+      public Builder setUid(int value) {
         
-        peerId_ = value;
+        uid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 peer_id = 8;</code>
+       * <code>uint32 uid = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPeerId() {
+      public Builder clearUid() {
         
-        peerId_ = 0;
+        uid_ = 0;
         onChanged();
         return this;
       }
@@ -720,10 +720,9 @@ public final class EvtHittingOtherInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031EvtHittingOtherInfo.proto\032\022AttackResul" +
-      "t.proto\"L\n\023EvtHittingOtherInfo\022$\n\rattack" +
-      "_result\030\002 \001(\0132\r.AttackResult\022\017\n\007peer_id\030" +
-      "\010 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
-      "o3"
+      "t.proto\"H\n\023EvtHittingOtherInfo\022$\n\rattack" +
+      "_result\030\016 \001(\0132\r.AttackResult\022\013\n\003uid\030\013 \001(" +
+      "\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -735,7 +734,7 @@ public final class EvtHittingOtherInfoOuterClass {
     internal_static_EvtHittingOtherInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvtHittingOtherInfo_descriptor,
-        new java.lang.String[] { "AttackResult", "PeerId", });
+        new java.lang.String[] { "AttackResult", "Uid", });
     emu.grasscutter.net.proto.AttackResultOuterClass.getDescriptor();
   }
 

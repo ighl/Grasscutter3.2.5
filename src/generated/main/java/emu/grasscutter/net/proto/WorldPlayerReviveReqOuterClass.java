@@ -20,9 +20,9 @@ public final class WorldPlayerReviveReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 225
+   * CmdId: 239
    * EnetChannelId: 0
-   * EnetIsReliable: false
+   * EnetIsReliable: true
    * IsAllowClient: true
    * </pre>
    *
@@ -248,9 +248,9 @@ public final class WorldPlayerReviveReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 225
+     * CmdId: 239
      * EnetChannelId: 0
-     * EnetIsReliable: false
+     * EnetIsReliable: true
      * IsAllowClient: true
      * </pre>
      *

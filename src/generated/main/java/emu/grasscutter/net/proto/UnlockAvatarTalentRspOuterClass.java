@@ -19,29 +19,28 @@ public final class UnlockAvatarTalentRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 talent_id = 2;</code>
+     * <code>uint32 talent_id = 7;</code>
      * @return The talentId.
      */
     int getTalentId();
 
     /**
-     * <code>int32 retcode = 3;</code>
+     * <code>int32 retcode = 11;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>uint64 avatar_guid = 10;</code>
+     * <code>uint64 avatar_guid = 6;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
   }
   /**
    * <pre>
-   * CmdId: 1098
+   * CmdId: 1068
    * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * EnetIsReliable: true
    * </pre>
    *
    * Protobuf type {@code UnlockAvatarTalentRsp}
@@ -88,19 +87,19 @@ public final class UnlockAvatarTalentRspOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 48: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 56: {
 
               talentId_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 88: {
 
               retcode_ = input.readInt32();
-              break;
-            }
-            case 80: {
-
-              avatarGuid_ = input.readUInt64();
               break;
             }
             default: {
@@ -135,10 +134,10 @@ public final class UnlockAvatarTalentRspOuterClass {
               emu.grasscutter.net.proto.UnlockAvatarTalentRspOuterClass.UnlockAvatarTalentRsp.class, emu.grasscutter.net.proto.UnlockAvatarTalentRspOuterClass.UnlockAvatarTalentRsp.Builder.class);
     }
 
-    public static final int TALENT_ID_FIELD_NUMBER = 2;
+    public static final int TALENT_ID_FIELD_NUMBER = 7;
     private int talentId_;
     /**
-     * <code>uint32 talent_id = 2;</code>
+     * <code>uint32 talent_id = 7;</code>
      * @return The talentId.
      */
     @java.lang.Override
@@ -146,10 +145,10 @@ public final class UnlockAvatarTalentRspOuterClass {
       return talentId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 3;
+    public static final int RETCODE_FIELD_NUMBER = 11;
     private int retcode_;
     /**
-     * <code>int32 retcode = 3;</code>
+     * <code>int32 retcode = 11;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -157,10 +156,10 @@ public final class UnlockAvatarTalentRspOuterClass {
       return retcode_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 10;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 6;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 10;</code>
+     * <code>uint64 avatar_guid = 6;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
@@ -182,14 +181,14 @@ public final class UnlockAvatarTalentRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (avatarGuid_ != 0L) {
+        output.writeUInt64(6, avatarGuid_);
+      }
       if (talentId_ != 0) {
-        output.writeUInt32(2, talentId_);
+        output.writeUInt32(7, talentId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(3, retcode_);
-      }
-      if (avatarGuid_ != 0L) {
-        output.writeUInt64(10, avatarGuid_);
+        output.writeInt32(11, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,17 +199,17 @@ public final class UnlockAvatarTalentRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (avatarGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, avatarGuid_);
+      }
       if (talentId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, talentId_);
+          .computeUInt32Size(7, talentId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, retcode_);
-      }
-      if (avatarGuid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, avatarGuid_);
+          .computeInt32Size(11, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -348,10 +347,9 @@ public final class UnlockAvatarTalentRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1098
+     * CmdId: 1068
      * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * EnetIsReliable: true
      * </pre>
      *
      * Protobuf type {@code UnlockAvatarTalentRsp}
@@ -514,7 +512,7 @@ public final class UnlockAvatarTalentRspOuterClass {
 
       private int talentId_ ;
       /**
-       * <code>uint32 talent_id = 2;</code>
+       * <code>uint32 talent_id = 7;</code>
        * @return The talentId.
        */
       @java.lang.Override
@@ -522,7 +520,7 @@ public final class UnlockAvatarTalentRspOuterClass {
         return talentId_;
       }
       /**
-       * <code>uint32 talent_id = 2;</code>
+       * <code>uint32 talent_id = 7;</code>
        * @param value The talentId to set.
        * @return This builder for chaining.
        */
@@ -533,7 +531,7 @@ public final class UnlockAvatarTalentRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 talent_id = 2;</code>
+       * <code>uint32 talent_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearTalentId() {
@@ -545,7 +543,7 @@ public final class UnlockAvatarTalentRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 3;</code>
+       * <code>int32 retcode = 11;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -553,7 +551,7 @@ public final class UnlockAvatarTalentRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 3;</code>
+       * <code>int32 retcode = 11;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -564,7 +562,7 @@ public final class UnlockAvatarTalentRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 3;</code>
+       * <code>int32 retcode = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -576,7 +574,7 @@ public final class UnlockAvatarTalentRspOuterClass {
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 10;</code>
+       * <code>uint64 avatar_guid = 6;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -584,7 +582,7 @@ public final class UnlockAvatarTalentRspOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 10;</code>
+       * <code>uint64 avatar_guid = 6;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -595,7 +593,7 @@ public final class UnlockAvatarTalentRspOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 10;</code>
+       * <code>uint64 avatar_guid = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
@@ -672,8 +670,8 @@ public final class UnlockAvatarTalentRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033UnlockAvatarTalentRsp.proto\"P\n\025UnlockA" +
-      "vatarTalentRsp\022\021\n\ttalent_id\030\002 \001(\r\022\017\n\007ret" +
-      "code\030\003 \001(\005\022\023\n\013avatar_guid\030\n \001(\004B\033\n\031emu.g" +
+      "vatarTalentRsp\022\021\n\ttalent_id\030\007 \001(\r\022\017\n\007ret" +
+      "code\030\013 \001(\005\022\023\n\013avatar_guid\030\006 \001(\004B\033\n\031emu.g" +
       "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

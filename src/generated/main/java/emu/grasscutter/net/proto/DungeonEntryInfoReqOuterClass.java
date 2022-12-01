@@ -19,46 +19,46 @@ public final class DungeonEntryInfoReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 point_id = 2;</code>
-     * @return The pointId.
-     */
-    int getPointId();
-
-    /**
-     * <code>uint32 scene_id = 9;</code>
+     * <code>uint32 scene_id = 14;</code>
      * @return The sceneId.
      */
     int getSceneId();
 
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>uint32 point_id = 6;</code>
+     * @return The pointId.
+     */
+    int getPointId();
+
+    /**
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> 
         getUnk2800GGAMJDFELPHList();
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair getUnk2800GGAMJDFELPH(int index);
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     int getUnk2800GGAMJDFELPHCount();
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> 
         getUnk2800GGAMJDFELPHOrBuilderList();
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder getUnk2800GGAMJDFELPHOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 972
+   * CmdId: 979
    * EnetChannelId: 0
-   * EnetIsReliable: false
+   * EnetIsReliable: true
    * IsAllowClient: true
    * </pre>
    *
@@ -108,12 +108,12 @@ public final class DungeonEntryInfoReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 48: {
 
               pointId_ = input.readUInt32();
               break;
             }
-            case 34: {
+            case 82: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 unk2800GGAMJDFELPH_ = new java.util.ArrayList<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair>();
                 mutable_bitField0_ |= 0x00000001;
@@ -122,7 +122,7 @@ public final class DungeonEntryInfoReqOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.parser(), extensionRegistry));
               break;
             }
-            case 72: {
+            case 112: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -162,21 +162,10 @@ public final class DungeonEntryInfoReqOuterClass {
               emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq.class, emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq.Builder.class);
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 2;
-    private int pointId_;
-    /**
-     * <code>uint32 point_id = 2;</code>
-     * @return The pointId.
-     */
-    @java.lang.Override
-    public int getPointId() {
-      return pointId_;
-    }
-
-    public static final int SCENE_ID_FIELD_NUMBER = 9;
+    public static final int SCENE_ID_FIELD_NUMBER = 14;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 9;</code>
+     * <code>uint32 scene_id = 14;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -184,17 +173,28 @@ public final class DungeonEntryInfoReqOuterClass {
       return sceneId_;
     }
 
-    public static final int UNK2800_GGAMJDFELPH_FIELD_NUMBER = 4;
+    public static final int POINT_ID_FIELD_NUMBER = 6;
+    private int pointId_;
+    /**
+     * <code>uint32 point_id = 6;</code>
+     * @return The pointId.
+     */
+    @java.lang.Override
+    public int getPointId() {
+      return pointId_;
+    }
+
+    public static final int UNK2800_GGAMJDFELPH_FIELD_NUMBER = 10;
     private java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> unk2800GGAMJDFELPH_;
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> getUnk2800GGAMJDFELPHList() {
       return unk2800GGAMJDFELPH_;
     }
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> 
@@ -202,21 +202,21 @@ public final class DungeonEntryInfoReqOuterClass {
       return unk2800GGAMJDFELPH_;
     }
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     @java.lang.Override
     public int getUnk2800GGAMJDFELPHCount() {
       return unk2800GGAMJDFELPH_.size();
     }
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair getUnk2800GGAMJDFELPH(int index) {
       return unk2800GGAMJDFELPH_.get(index);
     }
     /**
-     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+     * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder getUnk2800GGAMJDFELPHOrBuilder(
@@ -239,13 +239,13 @@ public final class DungeonEntryInfoReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pointId_ != 0) {
-        output.writeUInt32(2, pointId_);
+        output.writeUInt32(6, pointId_);
       }
       for (int i = 0; i < unk2800GGAMJDFELPH_.size(); i++) {
-        output.writeMessage(4, unk2800GGAMJDFELPH_.get(i));
+        output.writeMessage(10, unk2800GGAMJDFELPH_.get(i));
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(9, sceneId_);
+        output.writeUInt32(14, sceneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -258,15 +258,15 @@ public final class DungeonEntryInfoReqOuterClass {
       size = 0;
       if (pointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, pointId_);
+          .computeUInt32Size(6, pointId_);
       }
       for (int i = 0; i < unk2800GGAMJDFELPH_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, unk2800GGAMJDFELPH_.get(i));
+          .computeMessageSize(10, unk2800GGAMJDFELPH_.get(i));
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, sceneId_);
+          .computeUInt32Size(14, sceneId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -283,10 +283,10 @@ public final class DungeonEntryInfoReqOuterClass {
       }
       emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq other = (emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq) obj;
 
-      if (getPointId()
-          != other.getPointId()) return false;
       if (getSceneId()
           != other.getSceneId()) return false;
+      if (getPointId()
+          != other.getPointId()) return false;
       if (!getUnk2800GGAMJDFELPHList()
           .equals(other.getUnk2800GGAMJDFELPHList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -300,10 +300,10 @@ public final class DungeonEntryInfoReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + POINT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPointId();
       hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSceneId();
+      hash = (37 * hash) + POINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPointId();
       if (getUnk2800GGAMJDFELPHCount() > 0) {
         hash = (37 * hash) + UNK2800_GGAMJDFELPH_FIELD_NUMBER;
         hash = (53 * hash) + getUnk2800GGAMJDFELPHList().hashCode();
@@ -405,9 +405,9 @@ public final class DungeonEntryInfoReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 972
+     * CmdId: 979
      * EnetChannelId: 0
-     * EnetIsReliable: false
+     * EnetIsReliable: true
      * IsAllowClient: true
      * </pre>
      *
@@ -449,9 +449,9 @@ public final class DungeonEntryInfoReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        pointId_ = 0;
-
         sceneId_ = 0;
+
+        pointId_ = 0;
 
         if (unk2800GGAMJDFELPHBuilder_ == null) {
           unk2800GGAMJDFELPH_ = java.util.Collections.emptyList();
@@ -486,8 +486,8 @@ public final class DungeonEntryInfoReqOuterClass {
       public emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq buildPartial() {
         emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq result = new emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq(this);
         int from_bitField0_ = bitField0_;
-        result.pointId_ = pointId_;
         result.sceneId_ = sceneId_;
+        result.pointId_ = pointId_;
         if (unk2800GGAMJDFELPHBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             unk2800GGAMJDFELPH_ = java.util.Collections.unmodifiableList(unk2800GGAMJDFELPH_);
@@ -545,11 +545,11 @@ public final class DungeonEntryInfoReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq other) {
         if (other == emu.grasscutter.net.proto.DungeonEntryInfoReqOuterClass.DungeonEntryInfoReq.getDefaultInstance()) return this;
-        if (other.getPointId() != 0) {
-          setPointId(other.getPointId());
-        }
         if (other.getSceneId() != 0) {
           setSceneId(other.getSceneId());
+        }
+        if (other.getPointId() != 0) {
+          setPointId(other.getPointId());
         }
         if (unk2800GGAMJDFELPHBuilder_ == null) {
           if (!other.unk2800GGAMJDFELPH_.isEmpty()) {
@@ -607,40 +607,9 @@ public final class DungeonEntryInfoReqOuterClass {
       }
       private int bitField0_;
 
-      private int pointId_ ;
-      /**
-       * <code>uint32 point_id = 2;</code>
-       * @return The pointId.
-       */
-      @java.lang.Override
-      public int getPointId() {
-        return pointId_;
-      }
-      /**
-       * <code>uint32 point_id = 2;</code>
-       * @param value The pointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPointId(int value) {
-        
-        pointId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 point_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPointId() {
-        
-        pointId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 9;</code>
+       * <code>uint32 scene_id = 14;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -648,7 +617,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 9;</code>
+       * <code>uint32 scene_id = 14;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -659,12 +628,43 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 9;</code>
+       * <code>uint32 scene_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
         
         sceneId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int pointId_ ;
+      /**
+       * <code>uint32 point_id = 6;</code>
+       * @return The pointId.
+       */
+      @java.lang.Override
+      public int getPointId() {
+        return pointId_;
+      }
+      /**
+       * <code>uint32 point_id = 6;</code>
+       * @param value The pointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPointId(int value) {
+        
+        pointId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 point_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPointId() {
+        
+        pointId_ = 0;
         onChanged();
         return this;
       }
@@ -682,7 +682,7 @@ public final class DungeonEntryInfoReqOuterClass {
           emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> unk2800GGAMJDFELPHBuilder_;
 
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> getUnk2800GGAMJDFELPHList() {
         if (unk2800GGAMJDFELPHBuilder_ == null) {
@@ -692,7 +692,7 @@ public final class DungeonEntryInfoReqOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public int getUnk2800GGAMJDFELPHCount() {
         if (unk2800GGAMJDFELPHBuilder_ == null) {
@@ -702,7 +702,7 @@ public final class DungeonEntryInfoReqOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair getUnk2800GGAMJDFELPH(int index) {
         if (unk2800GGAMJDFELPHBuilder_ == null) {
@@ -712,7 +712,7 @@ public final class DungeonEntryInfoReqOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder setUnk2800GGAMJDFELPH(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair value) {
@@ -729,7 +729,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder setUnk2800GGAMJDFELPH(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder builderForValue) {
@@ -743,7 +743,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder addUnk2800GGAMJDFELPH(emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair value) {
         if (unk2800GGAMJDFELPHBuilder_ == null) {
@@ -759,7 +759,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder addUnk2800GGAMJDFELPH(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair value) {
@@ -776,7 +776,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder addUnk2800GGAMJDFELPH(
           emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder builderForValue) {
@@ -790,7 +790,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder addUnk2800GGAMJDFELPH(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder builderForValue) {
@@ -804,7 +804,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder addAllUnk2800GGAMJDFELPH(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> values) {
@@ -819,7 +819,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder clearUnk2800GGAMJDFELPH() {
         if (unk2800GGAMJDFELPHBuilder_ == null) {
@@ -832,7 +832,7 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public Builder removeUnk2800GGAMJDFELPH(int index) {
         if (unk2800GGAMJDFELPHBuilder_ == null) {
@@ -845,14 +845,14 @@ public final class DungeonEntryInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder getUnk2800GGAMJDFELPHBuilder(
           int index) {
         return getUnk2800GGAMJDFELPHFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder getUnk2800GGAMJDFELPHOrBuilder(
           int index) {
@@ -862,7 +862,7 @@ public final class DungeonEntryInfoReqOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> 
            getUnk2800GGAMJDFELPHOrBuilderList() {
@@ -873,14 +873,14 @@ public final class DungeonEntryInfoReqOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder addUnk2800GGAMJDFELPHBuilder() {
         return getUnk2800GGAMJDFELPHFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.getDefaultInstance());
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder addUnk2800GGAMJDFELPHBuilder(
           int index) {
@@ -888,7 +888,7 @@ public final class DungeonEntryInfoReqOuterClass {
             index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.getDefaultInstance());
       }
       /**
-       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 4;</code>
+       * <code>repeated .Uint32Pair Unk2800_GGAMJDFELPH = 10;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder> 
            getUnk2800GGAMJDFELPHBuilderList() {
@@ -976,9 +976,9 @@ public final class DungeonEntryInfoReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031DungeonEntryInfoReq.proto\032\020Uint32Pair." +
-      "proto\"c\n\023DungeonEntryInfoReq\022\020\n\010point_id" +
-      "\030\002 \001(\r\022\020\n\010scene_id\030\t \001(\r\022(\n\023Unk2800_GGAM" +
-      "JDFELPH\030\004 \003(\0132\013.Uint32PairB\033\n\031emu.grassc" +
+      "proto\"c\n\023DungeonEntryInfoReq\022\020\n\010scene_id" +
+      "\030\016 \001(\r\022\020\n\010point_id\030\006 \001(\r\022(\n\023Unk2800_GGAM" +
+      "JDFELPH\030\n \003(\0132\013.Uint32PairB\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -991,7 +991,7 @@ public final class DungeonEntryInfoReqOuterClass {
     internal_static_DungeonEntryInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DungeonEntryInfoReq_descriptor,
-        new java.lang.String[] { "PointId", "SceneId", "Unk2800GGAMJDFELPH", });
+        new java.lang.String[] { "SceneId", "PointId", "Unk2800GGAMJDFELPH", });
     emu.grasscutter.net.proto.Uint32PairOuterClass.getDescriptor();
   }
 
